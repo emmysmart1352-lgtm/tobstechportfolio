@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f3f1ed;
+  --ink: #141414;
+  --muted: #696762;
+  --line: rgba(20, 20, 20, 0.14);
+  --accent: #c8ff3d;
+  --dark: #161616;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* Subtle texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  z-index: 10;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav {
+  height: 88px;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  z-index: 2;
+}
+
+.brand {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+}
+
+.brand span {
+  color: #888;
+}
+
+.brand .dot {
+  color: var(--ink);
+}
+
+.nav nav {
+  display: flex;
+  gap: 32px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.nav nav a:hover {
+  color: #777;
+}
+
+.nav-cta {
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 4px;
+}
+
+.nav-cta span,
+.button span,
+.text-link span,
+.contact-email span {
+  font-size: 1.1em;
+  margin-left: 6px;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.section {
+  padding: clamp(80px, 10vw, 160px) 5vw;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.status {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #7fd21d;
+  border-radius: 50%;
+  margin-right: 9px;
+  box-shadow: 0 0 0 5px rgba(127, 210, 29, 0.13);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.065em;
+  line-height: 0.96;
+}
+
+h1 {
+  font-size: clamp(3.6rem, 7.5vw, 8.2rem);
+  max-width: 850px;
+}
+
+h1 em,
+h2 em {
+  font-style: normal;
+  color: #777;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: calc(100vh - 88px);
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 5vw;
+  align-items: center;
+  padding-top: clamp(70px, 9vw, 130px);
+}
+
+.hero-text {
+  max-width: 540px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 32px 0;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 16px 22px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  transition: 0.25s;
+}
+
+.button.primary {
+  background: var(--ink);
+  color: white;
+}
+
+.button.primary:hover {
+  transform: translateY(-3px);
+}
+
+.button.ghost {
+  border: 1px solid var(--line);
+}
+
+.button.ghost:hover {
+  background: white;
+}
+
+
+/* =========================
+   PORTRAIT
+========================= */
+
+.hero-visual {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portrait-frame {
+  width: min(78%, 430px);
+  aspect-ratio: 3 / 4;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: #d7d3cc;
+}
+
+.portrait-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    rgba(0, 0, 0, 0.38)
+  );
+  pointer-events: none;
+}
+
+.portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(0.82);
+  transform: scale(1.02);
+}
+
+.portrait-label {
+  position: absolute;
+  z-index: 2;
+  bottom: 22px;
+  left: 24px;
+  color: white;
+}
+
+.label-kicker {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+
+.portrait-label strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.05;
+}
+
+.orbit {
+  position: absolute;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  transform: rotate(-22deg);
+}
+
+.orbit-one {
+  border-color: rgba(20, 20, 20, 0.22);
+}
+
+.orbit-two {
+  width: 600px;
+  height: 260px;
+  transform: rotate(38deg);
+}
+
+.hero-tag {
+  position: absolute;
+  background: var(--accent);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 9px 13px;
+  z-index: 2;
+}
+
+.tag-one {
+  top: 18%;
+  right: 3%;
+  transform: rotate(8deg);
+}
+
+.tag-two {
+  bottom: 16%;
+  left: 0;
+  transform
