@@ -134,3 +134,99 @@ yearElements.forEach((element) => {
   element.textContent = new Date().getFullYear();
 
 });
+
+
+
+/* ================= WHATSAPP PROJECT ENQUIRY ================= */
+
+const projectForm =
+  document.querySelector("#projectForm");
+
+
+if (projectForm) {
+
+
+  projectForm.addEventListener(
+    "submit",
+    function (event) {
+
+
+      event.preventDefault();
+
+
+      const name =
+        document
+          .querySelector("#name")
+          .value
+          .trim();
+
+
+      const email =
+        document
+          .querySelector("#email")
+          .value
+          .trim();
+
+
+      const projectType =
+        document
+          .querySelector("#projectType")
+          .value;
+
+
+      const budget =
+        document
+          .querySelector("#budget")
+          .value;
+
+
+      const message =
+        document
+          .querySelector("#message")
+          .value
+          .trim();
+
+
+      const whatsappMessage =
+
+`Hello Toby 👋
+
+My name is ${name}.
+
+My email is ${email}.
+
+I am interested in:
+${projectType}
+
+My budget is:
+${budget || "Not specified"}
+
+Here are the details of my project:
+
+${message}
+
+I found Tob's Tech through the website and would like to discuss working together.`;
+
+
+      const whatsappNumber =
+        "2348035103083";
+
+
+      const whatsappURL =
+
+        `https://wa.me/${whatsappNumber}?text=${
+          encodeURIComponent(whatsappMessage)
+        }`;
+
+
+      window.open(
+        whatsappURL,
+        "_blank"
+      );
+
+
+    }
+
+  );
+
+}
