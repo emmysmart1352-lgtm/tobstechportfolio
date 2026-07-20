@@ -145,11 +145,9 @@ const projectForm =
 
 if (projectForm) {
 
-
   projectForm.addEventListener(
     "submit",
     function (event) {
-
 
       event.preventDefault();
 
@@ -213,7 +211,6 @@ I found Tob's Tech through the website and would like to discuss working togethe
 
 
       const whatsappURL =
-
         `https://wa.me/${whatsappNumber}?text=${
           encodeURIComponent(whatsappMessage)
         }`;
@@ -223,7 +220,6 @@ I found Tob's Tech through the website and would like to discuss working togethe
         whatsappURL,
         "_blank"
       );
-
 
     }
 
