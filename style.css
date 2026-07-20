@@ -1708,3 +1708,87 @@ h2 em {
   }
 
 }
+
+/* =====================================================
+   SHOPIFY PAGE SAFETY + LAYOUT FIXES
+   ===================================================== */
+
+.shopify-hero,
+.shopify-intro,
+.shopify-services-grid,
+.security-section,
+.shopify-process-grid,
+.accent-section {
+  position: relative;
+  width: 100%;
+}
+
+.shopify-hero {
+  min-height: 70vh;
+}
+
+.shopify-hero h1,
+.security-copy h2,
+.shopify-intro h2,
+.cta-block h2 {
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.shopify-hero em,
+.shopify-intro em,
+.security-copy em,
+.cta-block em {
+  font-style: normal;
+  color: #8cff9b;
+}
+
+.shopify-service,
+.shopify-process {
+  display: block;
+}
+
+.shopify-service h3,
+.shopify-process h3 {
+  color: inherit;
+}
+
+.shopify-service p,
+.shopify-process p {
+  display: block;
+}
+
+/* Keep Shopify page sections from collapsing */
+
+.shopify-intro,
+.security-section,
+.accent-section {
+  overflow: hidden;
+}
+
+/* Mobile protection */
+
+@media (max-width: 768px) {
+
+  .shopify-hero h1,
+  .security-copy h2,
+  .shopify-intro h2,
+  .cta-block h2 {
+    font-size: clamp(2.8rem, 12vw, 5rem);
+  }
+
+  .shopify-hero p {
+    font-size: 1rem;
+  }
+
+  .shopify-services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .security-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+}
