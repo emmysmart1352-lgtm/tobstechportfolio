@@ -1,4 +1,4 @@
-/* =====================================================
+ /* =====================================================
    TOB'S TECH — MAIN STYLESHEET
    ===================================================== */
 
@@ -1789,6 +1789,174 @@ h2 em {
   .security-grid {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+}
+/* =====================================================
+   WORK PAGE — CASE STUDY LAYOUT FIX
+   ===================================================== */
+
+
+/* ================= PAGE INTRO ================= */
+
+.page-hero {
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+.page-hero h1 {
+  max-width: 900px;
+  margin: 24px 0 32px;
+  line-height: 0.9;
+}
+
+.page-lead {
+  max-width: 650px;
+  line-height: 1.75;
+}
+
+
+/* ================= CASE STUDY ================= */
+
+.case-study {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 80px;
+  align-items: stretch;
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+
+/* ================= PROJECT VISUAL ================= */
+
+.case-visual {
+  min-height: 560px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* ================= CASE CONTENT ================= */
+
+.case-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 560px;
+  padding: 8px 0;
+}
+
+.case-index {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.case-content h2 {
+  margin: 24px 0 18px;
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  line-height: 0.95;
+}
+
+.case-content p {
+  max-width: 500px;
+  margin-bottom: 28px;
+  line-height: 1.75;
+}
+
+
+/* ================= TAGS ================= */
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-list span {
+  display: inline-flex;
+  padding: 8px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 999px;
+  font-size: 0.72rem;
+}
+
+
+/* ================= PROJECT LINK ================= */
+
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  margin-top: 50px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid currentColor;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.arrow-link span {
+  transition: transform 0.25s ease;
+}
+
+.arrow-link:hover span {
+  transform: translate(4px, -4px);
+}
+
+
+/* ================= PROJECT SEPARATOR ================= */
+
+.case-study + .case-study {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+  .case-study {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding-top: 65px;
+    padding-bottom: 80px;
+  }
+
+  .case-visual {
+    min-height: 420px;
+  }
+
+  .case-content {
+    min-height: auto;
+  }
+
+  .case-index {
+    margin-bottom: 25px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .page-hero {
+    padding-top: 80px;
+    padding-bottom: 65px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(3.5rem, 16vw, 6rem);
+  }
+
+  .case-visual {
+    min-height: 330px;
+  }
+
+  .case-content h2 {
+    font-size: 3rem;
   }
 
 }
