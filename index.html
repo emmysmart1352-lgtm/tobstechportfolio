@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tob’s Tech | Premium Web Developer & Shopify Expert</title>
+<meta name="description" content="Toby builds premium, fully animated websites and high-converting Shopify stores for ambitious businesses.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#0c0907">
+<meta property="og:title" content="Tob’s Tech | Premium Web Developer &amp; Shopify Expert">
+<meta property="og:description" content="Premium, fully animated websites and high-converting Shopify stores for ambitious businesses.">
+<meta property="og:image" content="assets/toby.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0907;--bg2:#15100c;--card:#1b140f;--line:rgba(255,255,255,.09);--text:#eef1ff;--mute:#9aa3c7;--a:#ff6a1a;--b:#ffb347;--ok:#34d399;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="dark"]){color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 "Instrument Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.05;margin:0;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--b);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+section{padding:110px 0;position:relative}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b));z-index:100}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:calc(14px + env(safe-area-inset-top,0px)) 0 14px;transition:.4s;backdrop-filter:blur(0)}
+nav.s{background:rgba(12,9,7,.75);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font:800 22px "Bricolage Grotesque";letter-spacing:-.03em}.logo i{font-style:normal;color:var(--b)}
+.links{display:flex;gap:28px;font-size:15px;color:var(--mute)}.links a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;border:1px solid var(--line);transition:transform .25s,box-shadow .3s;cursor:pointer;font-size:16px;font-family:inherit;color:var(--text);background:transparent}
+.btn.p{background:linear-gradient(120deg,var(--a),#ff8a3d 60%,var(--b));border:0;box-shadow:0 10px 40px -10px var(--a)}
+.btn.p:hover{box-shadow:0 14px 50px -6px var(--b)}
+.btn:hover{border-color:var(--b)}
+@media(max-width:820px){.links{display:none}section{padding:80px 0}}
+/* hero */
+#hero{min-height:100vh;display:flex;align-items:center;padding:140px 0 80px;overflow:hidden}
+#cv{position:absolute;inset:0;width:100%;height:100%}
+.glow{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,106,26,.35),transparent 65%);pointer-events:none;left:0;top:0;transform:translate(-50%,-50%);transition:opacity .4s}
+.hero-g{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+@media(max-width:900px){.hero-g{grid-template-columns:1fr}}
+.pill{display:inline-flex;gap:10px;align-items:center;padding:7px 16px;border:1px solid var(--line);border-radius:999px;font-size:14px;color:var(--mute);background:rgba(255,255,255,.03)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 var(--ok);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
+h1{font-size:clamp(44px,7vw,92px);font-weight:800;margin:22px 0}
+h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em}
+h1 .w span{display:inline-block;transform:translateY(110%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*90ms + .2s)}
+@keyframes up{to{transform:none}}
+h1 .g{background:linear-gradient(100deg,var(--a),var(--b),var(--a));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:up .9s forwards,sh 5s linear infinite}
+@keyframes sh{to{background-position:-200% 0}}
+.lead{max-width:560px;color:var(--mute);font-size:19px}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin:34px 0}
+.trust{display:flex;align-items:center;gap:14px;color:var(--mute);font-size:15px}
+.av{display:flex}.av b{width:36px;height:36px;border-radius:50%;border:2px solid var(--bg);margin-left:-10px;display:grid;place-items:center;font-size:13px;color:#fff}
+.av b:first-child{margin:0}
+.stars{color:#fbbf24;letter-spacing:2px}
+/* hero mockup */
+.mock{perspective:1200px}
+.win{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 40px 120px -30px rgba(255,106,26,.5);transform:rotateY(-12deg) rotateX(6deg);transition:transform .2s;animation:fl 6s ease-in-out infinite}
+@keyframes fl{50%{translate:0 -14px}}
+.win .t{display:flex;gap:7px;align-items:center;padding:13px 16px;border-bottom:1px solid var(--line);font-size:13px;color:var(--mute)}
+.win .t i{width:10px;height:10px;border-radius:50%;background:#ff5f57}.win .t i:nth-child(2){background:#febc2e}.win .t i:nth-child(3){background:#28c840}
+.win .t span{margin-left:10px}
+.win .bd{padding:22px;display:grid;gap:14px}
+.sk{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--line),rgba(255,255,255,.14),var(--line));background-size:200%;animation:sk 2.2s linear infinite}
+@keyframes sk{to{background-position:-200%}}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.kp div{background:var(--bg2);border-radius:12px;padding:14px}.kp b{font:700 22px "Bricolage Grotesque";display:block}.kp small{color:var(--mute);font-size:12px}
+.chip{position:absolute;background:rgba(27,20,15,.9);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:14px;padding:10px 16px;font-size:14px;animation:fl 5s ease-in-out infinite}
+/* marquee */
+.mq{border-block:1px solid var(--line);padding:22px 0;overflow:hidden;background:var(--bg2)}
+.mq div{display:flex;gap:56px;width:max-content;animation:mq 30s linear infinite;font:700 24px "Bricolage Grotesque";color:var(--mute)}
+.mq span::after{content:"✦";margin-left:56px;color:var(--a)}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:800px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{padding:30px 10px;border-left:1px solid var(--line);padding-left:26px}
+.stat b{font:800 clamp(40px,5vw,64px) "Bricolage Grotesque";display:block;line-height:1}
+.stat span{color:var(--mute)}
+/* heads */
+.hd{max-width:680px;margin-bottom:56px}.hd h2{font-size:clamp(34px,5vw,58px)}.hd p{color:var(--mute);margin:18px 0 0}
+.kick{color:var(--b);font-weight:600;margin-bottom:14px;display:block}
+.rv{opacity:0;transform:translateY(40px);transition:1s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+/* services */
+.sv{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:1000px){.sv{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.sv{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(300px circle at var(--mx,50%) var(--my,0),rgba(255,106,26,.22),transparent 60%);opacity:0;transition:.3s}
+.card:hover{border-color:rgba(255,106,26,.6);transform:translateY(-6px)}.card:hover::before{opacity:1}
+.card>*{position:relative}.ic{font-size:30px;margin-bottom:18px}.card h3{font-size:22px;margin-bottom:10px}.card p{color:var(--mute);margin:0;font-size:16px}
+.sv{grid-template-columns:repeat(6,1fr)!important}.sc{grid-column:span 2}.sc:nth-child(n+4){grid-column:span 3}
+@media(max-width:1000px){.sc,.sc:nth-child(n+4){grid-column:span 3}.sc:last-child{grid-column:span 6}}@media(max-width:640px){.sc,.sc:nth-child(n+4),.sc:last-child{grid-column:span 6}}
+.sn{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.sn .ic{margin:0}.sn b{font:800 38px "Bricolage Grotesque";color:var(--a);opacity:.9}
+.bdg{display:inline-block;margin:0 0 14px;padding:5px 12px;border-radius:99px;background:rgba(255,106,26,.15);color:#ffb27a;font-size:13px;font-weight:600}
+.sl{list-style:none;padding:0;margin:18px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:9px 16px;font-size:15px}.sl li::before{content:"✓";color:var(--a);margin-right:8px;font-weight:700}
+@media(max-width:1000px) and (min-width:641px){.sl{grid-template-columns:1fr}}
+
+.page{display:none}.page.on{display:block;animation:pg .7s cubic-bezier(.2,.8,.2,1)}@keyframes pg{from{opacity:0;transform:translateY(24px)}}
+a.card{display:block}.more{display:inline-block;margin-top:20px;color:var(--b);font-weight:600}
+.nr{display:flex;gap:10px;align-items:center}#mb{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:12px;width:46px;height:46px;font-size:20px;cursor:pointer}
+.links a.on{color:var(--text)}.dd{position:relative}.dm{position:absolute;top:100%;left:-14px;padding-top:14px;display:none}.dm::before{content:"";position:absolute;inset:14px 0 0;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -20px #000}
+.dd:hover .dm,.dd:focus-within .dm{display:block;animation:pg .3s}.dm a{position:relative;display:block;padding:11px 22px;white-space:nowrap}.dm a:first-child{margin-top:8px}.dm a:last-child{margin-bottom:8px}
+@media(max-width:820px){#mb{display:block}nav.open .links{display:flex;flex-direction:column;position:fixed;left:0;right:0;top:0;bottom:0;padding:90px 28px 28px;background:var(--bg);font-size:22px;gap:18px;overflow:auto;z-index:-1}nav.open .dm{display:block;position:static;padding:0}nav.open .dm::before{display:none}nav.open .dm a{padding:6px 0 6px 16px;font-size:17px;margin:0!important}}
+.sh1{padding:160px 0 50px}h1.s{font-size:clamp(38px,6vw,72px);font-weight:800;margin:16px 0}.sh1 .ic{font-size:44px}.crumb{color:var(--mute);display:inline-block;margin-bottom:18px}.crumb:hover{color:var(--b)}.sh1 .bdg{margin-bottom:14px}
+.gt{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}@media(max-width:800px){.gt{grid-template-columns:1fr}}.gt div{border-left:3px solid var(--a);padding:8px 0 8px 22px;font:700 22px "Bricolage Grotesque"}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}.chips a,.c2{padding:9px 18px;border:1px solid var(--line);border-radius:99px;color:var(--mute);font:500 15px "Instrument Sans";background:none;cursor:pointer}.chips a:hover,.c2:hover,.c2.on{color:var(--text);border-color:var(--a)}.c2.on{background:rgba(255,106,26,.15)}
+.ph2{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 100px -30px rgba(255,106,26,.55);border:1px solid var(--line)}.ph2 img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform 1.2s}.ph2:hover img{transform:scale(1.05)}
+.ph2 span{position:absolute;bottom:18px;left:18px;font:600 14px "Instrument Sans";background:rgba(12,9,7,.8);padding:8px 14px;border-radius:99px;backdrop-filter:blur(6px)}
+.fnd{display:flex;gap:12px;align-items:center;padding:8px 18px 8px 8px}.fnd img{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:top}.fnd small{display:block;color:var(--mute);font-size:12px}
+.ab2{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}@media(max-width:860px){.ab2{grid-template-columns:1fr}}
+.ct{display:grid;grid-template-columns:1.3fr .7fr;gap:24px;align-items:start}@media(max-width:900px){.ct{grid-template-columns:1fr}}
+form.card{display:grid;gap:18px}form label{display:grid;gap:8px;font-weight:600;font-size:15px}.f2{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:600px){.f2{grid-template-columns:1fr}}
+input,select,textarea{font:400 16px "Instrument Sans";color:var(--text);background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px;width:100%}input:focus,select:focus,textarea:focus{outline:2px solid var(--a);border-color:transparent}textarea{min-height:140px;resize:vertical}
+.ci{display:grid;gap:14px}.ci .card{padding:22px}.ci b{display:block;font:700 18px "Bricolage Grotesque"}.ci span{color:var(--mute);font-size:15px}
+.wab{background:#25d366!important;color:#04210f!important;border:0!important;display:inline-flex;align-items:center;gap:8px;box-shadow:0 10px 30px -10px #25d366}
+.rowb{display:flex;gap:12px;flex-wrap:wrap}
+/* shopify */
+.sh{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}@media(max-width:900px){.sh{grid-template-columns:1fr}}
+.sh h2{font-size:clamp(34px,5vw,56px)}
+.ck{list-style:none;padding:0;margin:28px 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ck li::before{content:"✓";color:var(--ok);margin-right:10px;font-weight:700}
+.dash{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px}
+.dash .top{display:flex;justify-content:space-between;color:var(--mute);font-size:14px}
+.dash .big{font:800 52px "Bricolage Grotesque";margin:8px 0 0}
+.up{color:var(--ok);font-size:15px}
+.bars{display:flex;align-items:flex-end;gap:10px;height:150px;margin:22px 0}
+.bars i{flex:1;border-radius:8px 8px 0 0;background:linear-gradient(var(--b),var(--a));height:0;transition:height 1.2s cubic-bezier(.2,.8,.2,1)}
+.dash.in .bars i{height:var(--h)}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini div{background:var(--bg2);border-radius:12px;padding:14px}.mini b{font:700 24px "Bricolage Grotesque";display:block}
+/* work */
+.wk{display:grid;gap:26px}
+.pj{display:grid;grid-template-columns:1.1fr .9fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:26px;overflow:hidden;transition:transform .4s,border-color .3s}
+.pj:nth-child(even){grid-template-columns:.9fr 1.1fr}.pj:nth-child(even) .pv{order:2}
+.pj:hover{transform:translateY(-6px);border-color:rgba(255,179,71,.5)}
+@media(max-width:860px){.pj,.pj:nth-child(even){grid-template-columns:1fr}.pj:nth-child(even) .pv{order:0}}
+.pv{min-height:330px;position:relative;display:grid;place-items:center;overflow:hidden}
+.pv .scr{width:76%;border-radius:14px;background:rgba(12,9,7,.85);border:1px solid var(--line);padding:18px;display:grid;gap:10px;transition:transform .6s}
+.pj:hover .scr{transform:scale(1.06) rotate(-1.5deg)}
+.scr h4{font:700 26px "Bricolage Grotesque";margin:0}.scr .sk{height:9px}
+.scr .bt{width:42%;height:30px;border-radius:99px;background:var(--c)}
+.pb{padding:40px}.tag{display:inline-block;padding:5px 14px;border-radius:99px;background:rgba(255,106,26,.15);color:#ffb27a;font-size:13px;font-weight:600}
+.pb h3{font-size:30px;margin:16px 0 10px}.pb p{color:var(--mute);margin:0 0 22px}
+.res{display:flex;gap:28px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}
+.res b{font:800 30px "Bricolage Grotesque";display:block;color:var(--text)}.res small{color:var(--mute)}
+.note{color:var(--mute);font-size:14px;margin-top:22px}
+/* process */
+.pr{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}
+@media(max-width:900px){.pr{grid-template-columns:1fr 1fr}}@media(max-width:560px){.pr{grid-template-columns:1fr}}
+.pr .card b{font:800 44px "Bricolage Grotesque";color:var(--a);display:block;margin-bottom:8px}
+/* why */
+.wy{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}@media(max-width:900px){.wy{grid-template-columns:1fr 1fr}}@media(max-width:560px){.wy{grid-template-columns:1fr}}
+/* testi */
+.tm{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}@media(max-width:900px){.tm{grid-template-columns:1fr}}
+.tm .card p{color:var(--text);font-size:17px;margin:14px 0 24px}
+.who{display:flex;align-items:center;gap:12px}.who b{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--a),var(--b));font-family:"Bricolage Grotesque"}
+.who small{display:block;color:var(--mute)}
+/* about */
+.ab{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}@media(max-width:860px){.ab{grid-template-columns:1fr}}
+.ph{aspect-ratio:1;border-radius:28px;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;font:800 120px "Bricolage Grotesque";position:relative;animation:fl 7s ease-in-out infinite}
+.ph::after{content:"Available for projects";position:absolute;bottom:18px;left:18px;font:600 14px "Instrument Sans";background:rgba(12,9,7,.8);padding:8px 14px;border-radius:99px}
+.ab h2{font-size:clamp(34px,5vw,54px);margin-bottom:20px}.ab p{color:var(--mute)}
+/* faq */
+details{border-bottom:1px solid var(--line);padding:22px 0}summary{cursor:pointer;font:700 21px "Bricolage Grotesque";list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";color:var(--b);transition:.3s}details[open] summary::after{transform:rotate(45deg)}details p{color:var(--mute);margin:12px 0 0;max-width:720px}
+/* cta */
+.fin{text-align:center;border:1px solid var(--line);border-radius:36px;padding:90px 24px;background:radial-gradient(circle at 50% 0,rgba(255,106,26,.35),transparent 60%),var(--card);overflow:hidden}
+.fin h2{font-size:clamp(36px,6vw,72px);max-width:800px;margin:0 auto 20px}.fin p{color:var(--mute);max-width:560px;margin:0 auto 34px}
+.fin .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:64px 0 30px;margin-top:100px;color:var(--mute);font-size:15px}
+.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:32px}@media(max-width:860px){.ft{grid-template-columns:1fr 1fr}}
+footer h4{color:var(--text);margin:0 0 14px;font-family:"Bricolage Grotesque";font-size:17px}footer a{display:block;margin-bottom:8px}footer a:hover{color:var(--b)}
+.cp{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+#top{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:48px;height:48px;border-radius:50%;background:var(--card);border:1px solid var(--line);color:var(--text);cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:40;font-size:18px}
+#top.on{opacity:1;pointer-events:auto}
+.wa{display:inline-flex;align-items:center;gap:10px;position:fixed;left:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:40;background:#25d366;color:#04210f;font-weight:700;padding:13px 20px;border-radius:99px;box-shadow:0 10px 30px -8px #25d366;animation:fl 4s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}h1 .w span{transform:none}.rv{opacity:1;transform:none}.bars i{height:var(--h)}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav id="nav"><div class="wrap"><a class="logo" href="#home">tobs<i>.tech</i></a>
+<div class="links"><a href="#home">Home</a><div class="dd"><a href="#services">Services ▾</a><div class="dm"><a href="#service-web">Web &amp; Digital Experiences</a><a href="#service-shopify">Shopify &amp; E-commerce</a><a href="#service-marketing">Digital Marketing</a><a href="#service-security">Cybersecurity &amp; Technical</a><a href="#service-creative">Creative &amp; Multimedia</a></div></div><a href="#service-shopify">Shopify</a><a href="#work">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+<div class="nr"><a class="btn p" href="#contact">Start Project</a><button id="mb" aria-label="Menu">☰</button></div></div></nav>
+<main id="pages"><div class="page on" id="p-home" data-t="Tob’s Tech | Premium Web Developer &amp; Shopify Expert">
+
+<header id="hero"><canvas id="cv"></canvas><div class="glow" id="glow"></div>
+<div class="wrap hero-g"><div>
+<span class="pill"><i class="dot"></i>Available worldwide · Taking 2 new projects this month</span>
+<h1 aria-label="Crafting digital experiences that convert."><span class="w"><span style="--i:0">Crafting</span></span> <span class="w"><span style="--i:1">digital</span></span> <span class="w"><span style="--i:2">experiences</span></span> <span class="w"><span class="g" style="--i:3">that&nbsp;convert.</span></span></h1>
+<p class="lead">I’m Toby. I design and build premium websites and Shopify stores for startups and founders who need their site to look, feel and perform like a real business asset.</p>
+<div class="cta"><a class="btn p" href="#contact">Start Your Project →</a><a class="btn" href="#work">View Portfolio</a></div>
+<div class="trust"><div class="av"><b style="background:#ff6a1a">S</b><b style="background:#ff8a3d">D</b><b style="background:#ff8a3d">E</b><b style="background:#e8590c">+</b></div><div><span class="stars">★★★★★</span><br>Trusted by <strong style="color:var(--text)">50+ satisfied clients</strong> worldwide</div></div>
+</div>
+<div class="mock" style="position:relative"><div class="win" id="win"><div class="t"><i></i><i></i><i></i><span>toby.dev</span></div>
+<div class="bd"><div class="kp"><div><b data-c="98">0</b><small>Speed score</small></div><div><b data-c="4.8" data-d="1">0</b><small>Conversion %</small></div><div><b data-c="24">0</b><small>Orders today</small></div></div>
+<div class="sk" style="width:80%"></div><div class="sk" style="width:60%"></div><div class="sk" style="width:90%"></div></div></div>
+<div class="chip" style="top:-18px;right:-8px">⚡ Deploys on Vercel</div><div class="chip fnd" style="bottom:-34px;right:6px"><img data-photo alt="Toby"><div><b>Toby</b><small>Founder, Tob’s Tech</small></div></div><div class="chip" style="bottom:-22px;left:-10px;animation-delay:-2s">🛒 Shopify Certified Build</div></div></div></header>
+
+<div class="mq" aria-label="Technologies"><div><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>MongoDB</span><span>Shopify</span><span>WordPress</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>MongoDB</span><span>Shopify</span><span>WordPress</span></div></div>
+
+<section id="h-stats" style="padding:70px 0"><div class="wrap stats rv">
+<div class="stat"><b><span data-c="50">0</span>+</b><span>Clients satisfied</span></div>
+<div class="stat"><b><span data-c="70">0</span>+</b><span>Projects designed</span></div>
+<div class="stat"><b><span data-c="100">0</span>%</b><span>Responsive builds</span></div>
+<div class="stat"><b>24/7</b><span>Support</span></div></div></section>
+
+<section id="h-services"><div class="wrap"><div class="hd rv"><span class="kick">What I offer</span><h2>Services built around your growth</h2><p>Five focused areas that cover everything a business needs to be seen, trusted and chosen online.</p></div>
+<div class="sv">
+<a class="card sc rv" href="#service-web"><div class="sn"><span class="ic">💻</span><b>01</b></div><h3>Web &amp; Digital Experiences</h3><p>Websites that look premium and work even harder.</p><ul class="sl"><li>Website Development</li><li>Landing Pages</li><li>UI/UX Design</li><li>Responsive Design</li><li>Business Websites</li><li>E-commerce Websites</li></ul><span class="more">Explore this service →</span></a>
+<a class="card sc rv" href="#service-shopify"><div class="sn"><span class="ic">🛒</span><b>02</b></div><h3>Shopify &amp; E-commerce</h3><p>Stores built to sell, secured and optimized.</p><span class="bdg">Licensed Shopify Partner · Shopify Expert</span><ul class="sl"><li>Shopify Store Development</li><li>Store Setup &amp; Configuration</li><li>Theme Customization</li><li>Security Audits</li><li>Speed Optimization</li><li>Shopify Consulting</li></ul><span class="more">Explore this service →</span></a>
+<a class="card sc rv" href="#service-marketing"><div class="sn"><span class="ic">📣</span><b>03</b></div><h3>Digital Marketing</h3><p>Getting your business seen, and chosen.</p><ul class="sl"><li>Social Media Management</li><li>Digital Advertising</li><li>Lead Generation</li><li>Conversion Landing Pages</li><li>Online Presence Optimization</li><li>Strategy &amp; Campaign Support</li></ul><span class="more">Explore this service →</span></a>
+<a class="card sc rv" href="#service-security"><div class="sn"><span class="ic">🔒</span><b>04</b></div><h3>Cybersecurity &amp; Technical Solutions</h3><p>Protecting what you’ve built.</p><ul class="sl"><li>Security Audits</li><li>Vulnerability Assessment</li><li>Store &amp; Site Hardening</li><li>Reliability &amp; Performance</li></ul><span class="more">Explore this service →</span></a>
+<a class="card sc rv" href="#service-creative"><div class="sn"><span class="ic">🎬</span><b>05</b></div><h3>Creative &amp; Multimedia</h3><p>Content that makes people stop scrolling.</p><ul class="sl"><li>Graphic Design</li><li>Photography</li><li>Cinematography</li><li>Video Editing</li><li>Photo Editing</li><li>2D/3D Animation</li></ul><span class="more">Explore this service →</span></a>
+</div></div></section>
+
+<section id="h-shopify" style="background:var(--bg2)"><div class="wrap sh">
+<div class="rv"><span class="kick">Shopify specialist</span><h2>Building Shopify stores that actually sell.</h2>
+<p style="color:var(--mute);margin-top:18px">I help brands launch premium Shopify experiences focused on trust, conversion, speed and long-term growth. Every store looks world-class and stays easy to manage.</p>
+<ul class="ck"><li>Premium Store Design</li><li>Shopify Development</li><li>Security Audit</li><li>Speed Optimization</li><li>Conversion Optimization</li><li>App Integration</li><li>Payment Gateway Setup</li><li>Product Upload & Organization</li></ul>
+<div class="cta" style="margin:0"><a class="btn p" href="#contact">Start Store →</a><a class="btn" href="#work">See store results</a></div></div>
+<div class="dash rv" id="dash"><div class="top"><span>Monthly store performance</span><span class="up">▲ 38% vs last month</span></div>
+<div class="big">$<span data-c="48200">0</span></div>
+<div class="bars"><i style="--h:35%"></i><i style="--h:48%"></i><i style="--h:42%"></i><i style="--h:60%"></i><i style="--h:55%"></i><i style="--h:74%"></i><i style="--h:68%"></i><i style="--h:92%"></i></div>
+<div class="mini"><div><b data-c="1240">0</b><small style="color:var(--mute)">Orders</small></div><div><b><span data-c="4.6" data-d="1">0</span>%</b><small style="color:var(--mute)">Conversion</small></div></div>
+<p class="note" style="margin:14px 0 0">Illustrative dashboard.</p></div></div></section>
+
+<section id="h-work"><div class="wrap"><div class="hd rv"><span class="kick">Selected work</span><h2>Projects built to turn visitors into customers</h2><p>Every build starts with a business goal: more bookings, more sales, more qualified leads. Here is how that played out.</p></div>
+<div class="wk">
+<article class="pj rv"><div class="pv" style="background:linear-gradient(135deg,#4a2410,#15100c);--c:#ffb347"><div class="scr"><h4>Reserve a table</h4><div class="sk"></div><div class="sk" style="width:70%"></div><div class="bt"></div></div></div>
+<div class="pb"><span class="tag">Website Development</span><h3>Luxury Restaurant Website</h3><p>Elegant typography, immersive visuals and a seamless reservation flow that replaced phone-only booking.</p><div class="res"><div><b>+62%</b><small>Online reservations</small></div><div><b>1.4s</b><small>Load time</small></div><div><b>98</b><small>Lighthouse</small></div></div></div></article>
+<article class="pj rv"><div class="pv" style="background:linear-gradient(135deg,#4a3010,#15100c);--c:#ff8a3d"><div class="scr"><h4>New season</h4><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px"><div class="sk" style="height:60px"></div><div class="sk" style="height:60px"></div><div class="sk" style="height:60px"></div></div><div class="bt"></div></div></div>
+<div class="pb"><span class="tag">Shopify</span><h3>Modern Fashion Store</h3><p>Maximized product visibility with faster collections, a streamlined checkout and trusted payment setup.</p><div class="res"><div><b>+41%</b><small>Conversion rate</small></div><div><b>+28%</b><small>Average order value</small></div><div><b>-35%</b><small>Cart abandonment</small></div></div></div></article>
+<article class="pj rv"><div class="pv" style="background:linear-gradient(135deg,#5a2a0e,#15100c);--c:#ff6a1a"><div class="scr"><h4>Ship faster.</h4><div class="sk"></div><div class="sk" style="width:55%"></div><div class="bt"></div></div></div>
+<div class="pb"><span class="tag">Business Website</span><h3>Technology Startup</h3><p>Minimal design, bold typography and conversion-focused layouts that made the demo request the clear next step.</p><div class="res"><div><b>3.2x</b><small>Demo requests</small></div><div><b>+55%</b><small>Time on page</small></div><div><b>100%</b><small>Mobile ready</small></div></div></div></article>
+<article class="pj rv"><div class="pv" style="background:linear-gradient(135deg,#3d2a12,#15100c);--c:#ffd08a"><div class="scr"><h4>Secure checkout</h4><div class="sk"></div><div class="sk" style="width:65%"></div><div class="bt"></div></div></div>
+<div class="pb"><span class="tag">Shopify Security Audit</span><h3>Store Security & Speed Audit</h3><p>Found and fixed vulnerable apps, exposed settings and slow scripts, then documented every change for the owner.</p><div class="res"><div><b>14</b><small>Issues fixed</small></div><div><b>2.1x</b><small>Faster pages</small></div><div><b>0</b><small>Downtime</small></div></div></div></article>
+</div><p class="note">Case study figures are representative. Replace them with your verified client numbers before launch.</p></div></section>
+
+<section id="h-process" style="background:var(--bg2)"><div class="wrap"><div class="hd rv"><span class="kick">How it works</span><h2>From first message to live site</h2><p>A clear process, so you always know what happens next.</p></div>
+<div class="pr">
+<div class="card rv"><b>1</b><h3>Discovery</h3><p>We agree on goals, audience and what success looks like.</p></div>
+<div class="card rv"><b>2</b><h3>Design</h3><p>You review a premium design before a line of code is written.</p></div>
+<div class="card rv"><b>3</b><h3>Build</h3><p>Fast, secure, SEO-ready development with weekly progress updates.</p></div>
+<div class="card rv"><b>4</b><h3>Launch & support</h3><p>Go live on Vercel or Shopify, with support after launch.</p></div></div></div></section>
+
+<section><div class="wrap"><div class="hd rv"><span class="kick">Why tob’s tech</span><h2>More than a website. A digital business asset.</h2><p>Every website is designed to attract attention, build trust, generate enquiries and position your business as an industry leader.</p></div>
+<div class="wy">
+<div class="card rv"><div class="ic">🎨</div><h3>Premium Design</h3><p>Modern interfaces with premium typography, spacing and layouts that immediately create trust.</p></div>
+<div class="card rv"><div class="ic">⚡</div><h3>Lightning Fast</h3><p>Optimized loading speed for better user experience, SEO and higher conversions.</p></div>
+<div class="card rv"><div class="ic">🔍</div><h3>SEO Ready</h3><p>Built with semantic HTML, structured content and Google-friendly practices.</p></div>
+<div class="card rv"><div class="ic">📱</div><h3>Responsive</h3><p>Every screen size receives a premium experience, from desktop to mobile.</p></div>
+<div class="card rv"><div class="ic">🛡️</div><h3>Secure</h3><p>Performance, reliability and security are considered from the first line of code.</p></div>
+<div class="card rv"><div class="ic">📈</div><h3>Growth Focused</h3><p>Your website isn’t just beautiful. It’s designed to convert visitors into enquiries.</p></div></div></div></section>
+
+<section id="proof" style="background:var(--bg2)"><div class="wrap"><div class="hd rv"><span class="kick">Testimonials</span><h2>50+ clients satisfied. Here’s what they say.</h2></div>
+<div class="tm">
+<div class="card rv"><span class="stars">★★★★★</span><p>“Toby was responsive throughout the project and delivered a polished website that reflected our brand well. Communication was clear and the final result exceeded what we expected.”</p><div class="who"><b>S</b><div>Simon Henry<small>Business Owner</small></div></div></div>
+<div class="card rv"><span class="stars">★★★★★</span><p>“Our Shopify store became significantly easier to navigate after the redesign. The improvements made the shopping experience much smoother.”</p><div class="who"><b>D</b><div>David Donald<small>eCommerce Founder</small></div></div></div>
+<div class="card rv"><span class="stars">★★★★★</span><p>“The attention to detail stood out. Every section of the website felt thoughtfully designed, and performance was noticeably improved.”</p><div class="who"><b>E</b><div>Elizabeth Marie<small>Marketing Consultant</small></div></div></div></div></div></section>
+
+<section id="h-about"><div class="wrap ab"><div class="ph2 rv"><img data-photo alt="Toby, founder of Tob’s Tech"><span>Available for projects</span></div><div class="rv"><span class="kick">About tob’s tech</span><h2>Helping businesses stand out online.</h2>
+<p>Hi, I’m Toby, the creative expert behind Tob’s Tech. I specialize in premium website development, Shopify store development, UI/UX design and modern frontend experiences.</p>
+<p>Every project I build focuses on clean design, performance, trust and helping businesses convert visitors into customers.</p></div></div></section>
+
+<section style="padding-top:0"><div class="wrap" style="max-width:860px"><div class="hd rv"><h2>Questions, answered</h2></div>
+<details class="rv"><summary>How long does a project take?</summary><p>Business websites usually take 2 to 4 weeks. Shopify stores take 3 to 6 weeks depending on products and integrations.</p></details>
+<details class="rv"><summary>Will my site work on mobile?</summary><p>Yes. Every build is responsive and tested across phones, tablets and desktops.</p></details>
+<details class="rv"><summary>Do you offer support after launch?</summary><p>Yes. I stay available after launch for fixes, updates and improvements.</p></details>
+<details class="rv"><summary>Can you audit my existing Shopify store?</summary><p>Yes. The security audit reviews apps, settings and speed, and you get a clear list of fixes.</p></details></div></section>
+
+<section id="h-contact" style="padding-top:0"><div class="wrap"><div class="fin rv"><span class="kick">Let’s build something amazing</span><h2>Ready to build your next project?</h2><p>Whether you’re launching a startup, redesigning your website or building a high-converting Shopify store, let’s create something exceptional together.</p>
+<div class="cta"><a class="btn p" href="mailto:tobstech38@gmail.com">Start Your Project</a><a class="btn" href="https://wa.me/2348035103083"><svg class="wi" viewBox="0 0 24 24" width="20" height="20" style="color:#25d366" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Chat on WhatsApp</a></div></div></div>
+</section>
+
+</div></main>
+<footer><div class="wrap"><div class="ft"><div><a class="logo" href="#home" style="color:var(--text)">tobs<i>.tech</i></a><p>Building premium websites, Shopify stores and digital experiences that help businesses grow with confidence.</p></div>
+<div><h4>Navigation</h4><a href="#home">Home</a><a href="#services">Services</a><a href="#work">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+<div><h4>Services</h4><a href="#service-web">Web &amp; Digital</a><a href="#service-shopify">Shopify &amp; E-commerce</a><a href="#service-marketing">Digital Marketing</a><a href="#service-security">Cybersecurity</a><a href="#service-creative">Creative &amp; Multimedia</a></div>
+<div><h4>Get in touch</h4><a href="mailto:tobstech38@gmail.com">tobstech38@gmail.com</a><a href="tel:+2348035103083">+234 803 510 3083</a><a href="https://wa.me/2348035103083">WhatsApp</a><span>Nigeria · Remote Worldwide</span></div></div>
+<div class="cp"><span>© Tob’s Tech. All rights reserved.</span><span>Built by Toby · Deployed on Vercel</span></div></div></footer>
+<a class="wa" href="https://wa.me/2348035103083"><svg class="wi" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Chat on WhatsApp</a><button id="top" aria-label="Back to top">↑</button>
+
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var bar=document.getElementById('bar'),nav=document.getElementById('nav'),top=document.getElementById('top');
+function sc(){var h=document.documentElement,p=h.scrollTop/(h.scrollHeight-h.clientHeight);bar.style.width=(p*100)+'%';nav.classList.toggle('s',h.scrollTop>30);top.classList.toggle('on',h.scrollTop>700)}
+addEventListener('scroll',sc,{passive:true});sc();
+top.onclick=function(){scrollTo({top:0})};
+function count(el){var t=+el.dataset.c,d=+el.dataset.d||0,s=performance.now(),n=1600;
+function f(now){var p=Math.min((now-s)/n,1),e=1-Math.pow(1-p,3),v=t*e;el.textContent=d?v.toFixed(d):Math.round(v).toLocaleString();if(p<1&&!rm)requestAnimationFrame(f)}
+rm?el.textContent=d?t.toFixed(d):t.toLocaleString():requestAnimationFrame(f)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('[data-c]').forEach(count);io.unobserve(e.target)}})},{threshold:.18});
+document.querySelectorAll('.rv,#dash').forEach(function(e,i){e.style.transitionDelay=(i%4)*80+'ms';io.observe(e)});
+document.querySelectorAll('.win [data-c]').forEach(function(e){setTimeout(function(){count(e)},900)});
+document.querySelectorAll('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')})});
+var win=document.getElementById('win'),gl=document.getElementById('glow'),hero=document.getElementById('hero'),mx=-999,my=-999;
+hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;gl.style.left=mx+'px';gl.style.top=my+'px';
+if(!rm){var x=(e.clientX/innerWidth-.5),y=(e.clientY/innerHeight-.5);win.style.transform='rotateY('+(-12+x*10)+'deg) rotateX('+(6-y*10)+'deg)'}});
+var cv=document.getElementById('cv'),cx=cv.getContext('2d'),W,H,P=[];
+function rs(){W=cv.width=hero.clientWidth;H=cv.height=hero.clientHeight;P=[];var n=Math.min(70,Math.floor(W/18));for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4})}
+rs();addEventListener('resize',rs);
+function draw(){cx.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var a=P[i];a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;
+cx.fillStyle='rgba(255,179,71,.7)';cx.beginPath();cx.arc(a.x,a.y,1.6,0,6.3);cx.fill();
+for(var j=i+1;j<P.length;j++){var b=P[j],dx=a.x-b.x,dy=a.y-b.y,d=dx*dx+dy*dy;if(d<14000){cx.strokeStyle='rgba(255,106,26,'+(.35*(1-d/14000))+')';cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}
+var mdx=a.x-mx,mdy=a.y-my,md=mdx*mdx+mdy*mdy;if(md<22000){cx.strokeStyle='rgba(255,179,71,'+(.6*(1-md/22000))+')';cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(mx,my);cx.stroke()}}
+requestAnimationFrame(draw)}
+if(!rm)draw();window.__io=io;
+})();
+</script>
+<script>
+(function(){
+var PH="assets/toby.jpg",main=document.getElementById('pages'),nav=document.getElementById('nav');
+var WA='https://wa.me/2348035103083';
+var S={
+web:{n:'Web &amp; Digital Experiences',ic:'💻',t:'Websites that look premium and work even harder.',p:'Your website is often the first thing a customer judges you on. I design and build sites that load fast, look premium and make the next step obvious.',
+i:[['Website Development','Fast, SEO-friendly sites built with modern code and tailored to your goals.'],['Landing Pages','Single-purpose pages designed to turn ad and social traffic into enquiries.'],['UI/UX Design','Clear layouts and flows that guide visitors to the action you want.'],['Responsive Design','Every screen from phone to widescreen gets a polished experience.'],['Business Websites','Credible company sites that explain what you do and win trust fast.'],['E-commerce Websites','Online stores with smooth product browsing, cart and checkout.']],
+g:['Custom design, never a recycled template','Built for speed and search','Easy for you to update'],f:[['How long does a website take?','Most business websites take 2 to 4 weeks, depending on pages and features.'],['Do I review the design first?','Yes. You approve the design before development starts.']]},
+shopify:{n:'Shopify &amp; E-commerce',ic:'🛒',b:'Licensed Shopify Partner · Shopify Expert',t:'Stores built to sell, secured and optimized.',p:'A store that looks good is not enough. I build Shopify stores that load quickly, feel trustworthy and make buying effortless.',
+i:[['Shopify Store Development','Complete custom stores built around your products and brand.'],['Store Setup &amp; Configuration','Payments, shipping, taxes and settings set up correctly from day one.'],['Theme Customization','Your theme tuned and extended so it looks like nobody else’s.'],['Security Audits','A review of apps, permissions and settings to close risky gaps.'],['Speed Optimization','Leaner themes, scripts and images for faster pages and better conversion.'],['Shopify Consulting','Straight advice on apps, structure and growth for existing stores.']],
+g:['Conversion-focused layouts','A secure, tidy setup','Training so you can manage it yourself'],f:[['Can you fix my existing store?','Yes. I can audit it, speed it up and redesign the weak spots without starting over.'],['Do you upload products?','Yes. I can upload and organize products, collections and variants.']]},
+marketing:{n:'Digital Marketing',ic:'📣',t:'Getting your business seen, and chosen.',p:'Being seen is only half the job. Marketing here is tied to your website, so attention turns into enquiries and sales.',
+i:[['Social Media Management','Consistent, on-brand content and community care across your channels.'],['Digital Advertising','Targeted campaigns that put your offer in front of the right people.'],['Lead Generation','Systems that bring in qualified enquiries, not just clicks.'],['Conversion Landing Pages','Pages built for one goal: turning ad traffic into customers.'],['Online Presence Optimization','Consistent profiles, listings and search visibility so you are easy to find.'],['Strategy &amp; Campaign Support','A clear plan and hands-on help to run it.']],
+g:['One plan across every channel','Landing pages that match your ads','Clear reporting on what works'],f:[['Do you run ads and the website together?','Yes. Keeping both under one plan means the page matches the ad.'],['What do I need to start?','A goal, a budget range and access to your existing accounts.']]},
+security:{n:'Cybersecurity &amp; Technical Solutions',ic:'🔒',t:'Protecting what you’ve built.',p:'A breach or outage costs trust you cannot buy back. I find the weak points and fix them before they cost you.',
+i:[['Security Audits','A full review of your site or store with a clear list of findings.'],['Vulnerability Assessment','Checks for weak spots in code, apps, access and configuration.'],['Store &amp; Site Hardening','Fixes applied so attackers have fewer ways in.'],['Reliability &amp; Performance','Monitoring, backups and tuning to keep things fast and online.']],
+g:['A plain-language report','Prioritized fixes','Every change documented'],f:[['Will the audit disrupt my site?','No. Assessments are done carefully to avoid downtime.'],['Do you fix the issues too?','Yes. I can report only, or fix everything I find.']]},
+creative:{n:'Creative &amp; Multimedia',ic:'🎬',t:'Content that makes people stop scrolling.',p:'Strong visuals stop the scroll. I produce design, photo and video that match your website and your brand.',
+i:[['Graphic Design','Logos, social graphics and brand assets with a consistent look.'],['Photography','Product and brand photos that make your offer look its best.'],['Cinematography','Cinematic video that tells your brand story.'],['Video Editing','Clean, well-paced edits for ads, reels and brand films.'],['Photo Editing','Retouching and colour work for sharp, consistent imagery.'],['2D/3D Animation','Motion graphics and animation that explain ideas and grab attention.']],
+g:['A consistent brand look','Files ready for every platform','Visuals that match your website'],f:[['Can you shoot and edit in one project?','Yes. Photography, video and editing can be one package.'],['Will assets match my website?','Yes. I design everything to fit your brand and site.']]}};
+function pg(id,t,h){var d=document.createElement('div');d.className='page';d.id='p-'+id;d.dataset.t=t;d.innerHTML=h;main.appendChild(d);return d}
+function cl(id){var c=document.getElementById(id).cloneNode(true);c.removeAttribute('id');return c.outerHTML}
+var cta=cl('h-contact'),proc=cl('h-process'),proof=cl('proof'),stats=cl('h-stats');
+var hero=function(h,p,x){return '<section class="sh1"><div class="wrap"><h1 class="s">'+h+'</h1><p class="lead">'+p+'</p>'+(x||'')+'</div></section>'};
+pg('services','Services',hero('Services built around your growth','Five focused areas that cover everything a business needs to be seen, trusted and chosen online.')+cl('h-services').replace('<span class="kick">What I offer</span><h2>Services built around your growth</h2><p>Five focused areas that cover everything a business needs to be seen, trusted and chosen online.</p>','').replace('class="hd rv"','class="hd" style="display:none"')+proc+cta);
+var names=Object.keys(S);
+names.forEach(function(k){var s=S[k];
+var oth=names.filter(function(x){return x!=k}).map(function(x){return '<a href="#service-'+x+'">'+S[x].n+'</a>'}).join('');
+pg('service-'+k,s.n.replace('&amp;','&'),'<section class="sh1"><div class="wrap"><a class="crumb" href="#services">← All services</a><div class="ic">'+s.ic+'</div><h1 class="s">'+s.n+'</h1>'+(s.b?'<span class="bdg">'+s.b+'</span>':'')+'<p class="lead">'+s.t+' '+s.p+'</p><div class="cta"><a class="btn p" href="#contact">Get a quote →</a><a class="btn" href="#work">See projects</a></div></div></section>'+
+'<section style="padding-top:20px"><div class="wrap"><div class="hd rv"><h2>What’s included</h2></div><div class="wy">'+s.i.map(function(x){return '<div class="card rv"><h3>'+x[0]+'</h3><p>'+x[1]+'</p></div>'}).join('')+'</div></div></section>'+
+'<section style="padding-top:0"><div class="wrap"><div class="hd rv"><h2>What you get</h2></div><div class="gt rv">'+s.g.map(function(x){return '<div>'+x+'</div>'}).join('')+'</div></div></section>'+proc+
+'<section><div class="wrap" style="max-width:860px"><div class="hd rv"><h2>Questions</h2></div>'+s.f.map(function(f){return '<details class="rv"><summary>'+f[0]+'</summary><p>'+f[1]+'</p></details>'}).join('')+'<div class="chips rv" style="margin-top:40px"><span style="color:var(--mute);padding:9px 0">Other services:</span>'+oth+'</div></div></section>'+cta)});
+var w=pg('work','Portfolio',hero('Projects that earn their keep','Every build starts with a business goal: more bookings, more sales, more qualified leads.','<div class="chips" id="fl"><button class="c2 on" data-f="">All</button><button class="c2" data-f="website">Websites</button><button class="c2" data-f="shopify">Shopify</button><button class="c2" data-f="security">Security</button></div>')+cl('h-work')+stats+proof+cta);
+w.querySelector('.hd').remove();
+w.querySelectorAll('#fl .c2').forEach(function(b){b.onclick=function(){w.querySelectorAll('#fl .c2').forEach(function(x){x.classList.toggle('on',x==b)});w.querySelectorAll('.pj').forEach(function(p){p.style.display=!b.dataset.f||p.querySelector('.tag').textContent.toLowerCase().indexOf(b.dataset.f)>-1?'':'none'})}});
+pg('about','About','<section class="sh1"><div class="wrap ab2"><div class="ph2 rv"><img data-photo alt="Toby, founder of Tob’s Tech"><span>Available for projects</span></div><div class="rv"><span class="kick">About tob’s tech</span><h1 class="s">Helping businesses stand out online.</h1><p class="lead">Hi, I’m Toby, the creative expert behind Tob’s Tech. I specialize in premium website development, Shopify store development, UI/UX design and modern frontend experiences.</p><p class="lead">Every project I build focuses on clean design, performance, trust and helping businesses convert visitors into customers.</p><div class="cta"><a class="btn p" href="#contact">Work with me →</a><a class="btn" href="#services">See services</a></div></div></div></section>'+
+'<section style="padding-top:20px"><div class="wrap"><div class="hd rv"><h2>How I work</h2></div><div class="wy"><div class="card rv"><div class="ic">🎯</div><h3>Goal first</h3><p>Every decision is tied to what your business needs the site to do.</p></div><div class="card rv"><div class="ic">💬</div><h3>Clear communication</h3><p>You know what is happening at every stage, with no surprises.</p></div><div class="card rv"><div class="ic">✨</div><h3>Attention to detail</h3><p>Typography, spacing, speed and security are checked before launch.</p></div></div></div></section>'+stats+proof+cta);
+var sel=names.map(function(k){return '<option>'+S[k].n.replace('&amp;','&')+'</option>'}).join('');
+pg('contact','Contact',hero('Let’s build something amazing','Tell me about your project and I’ll reply with next steps. WhatsApp is the fastest way to reach me.')+'<section style="padding:10px 0 40px"><div class="wrap ct"><form id="cf" class="card rv" onsubmit="return false"><div class="f2"><label>Your name<input name="n" required autocomplete="name"></label><label>Email<input name="e" type="email" required autocomplete="email"></label></div><div class="f2"><label>Service<select name="s">'+sel+'<option>Not sure yet</option></select></label><label>Budget<select name="b"><option>Under $500</option><option>$500 – $1,500</option><option>$1,500 – $5,000</option><option>$5,000+</option><option>Not sure yet</option></select></label></div><label>About your project<textarea name="m" required placeholder="What are you building and what should it achieve?"></textarea></label><div class="rowb"><button type="button" class="btn p wab" id="sw">Send on WhatsApp</button><button type="button" class="btn" id="se">Send by email</button></div></form>'+
+'<div class="ci rv"><div class="card"><b>WhatsApp</b><span>+234 803 510 3083</span></div><div class="card"><b>Email</b><span>tobstech38@gmail.com</span></div><div class="card"><b>Location</b><span>Nigeria · Remote Worldwide</span></div></div></div></section>');
+var WAI=document.querySelector('.wa svg').outerHTML.replace('width="22" height="22"','width="20" height="20"');document.getElementById('sw').insertAdjacentHTML('afterbegin',WAI);
+function msg(){var f=document.getElementById('cf');if(!f.reportValidity())return null;var v=function(n){return f.elements[n].value};return 'Hi Toby, I’m '+v('n')+' ('+v('e')+'). Service: '+v('s')+'. Budget: '+v('b')+'. Project: '+v('m')}
+document.getElementById('sw').onclick=function(){var m=msg();if(m)open(WA+'?text='+encodeURIComponent(m),'_blank')};
+document.getElementById('se').onclick=function(){var m=msg();if(m)location.href='mailto:tobstech38@gmail.com?subject='+encodeURIComponent('New project enquiry')+'&body='+encodeURIComponent(m)};
+document.querySelectorAll('img[data-photo]').forEach(function(i){i.src=PH});
+var al={hero:'home',proof:'home',shopify:'service-shopify'};
+function route(){var h=(location.hash||'#home').slice(1);h=al[h]||h;var d=document.getElementById('p-'+h);if(!d){h='home';d=document.getElementById('p-home')}
+document.querySelectorAll('.page.on').forEach(function(p){p.classList.remove('on')});d.classList.add('on');document.title=d.dataset.t.indexOf('|')>-1?d.dataset.t:d.dataset.t+' | Tob’s Tech';
+nav.classList.remove('open');document.querySelectorAll('.links a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')=='#'+h)});
+scrollTo({top:0,behavior:'instant'});dispatchEvent(new Event('resize'));
+d.querySelectorAll('.rv,#dash').forEach(function(e,i){if(!e.classList.contains('in')){e.style.transitionDelay=(i%4)*80+'ms';window.__io&&window.__io.observe(e)}})}
+document.getElementById('mb').onclick=function(){nav.classList.toggle('open')};
+addEventListener('hashchange',route);route();
+})();
+
+</script>
+</body>
+</html>
